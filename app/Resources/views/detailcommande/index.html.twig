@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Detailcommandes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Qtecommande</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for detailcommande in detailcommandes %}
+            <tr>
+                <td><a href="{{ path('detailcommande_show', { 'id': detailcommande.id }) }}">{{ detailcommande.id }}</a></td>
+                <td>{{ detailcommande.qtecommande }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('detailcommande_show', { 'id': detailcommande.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('detailcommande_edit', { 'id': detailcommande.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('detailcommande_new') }}">Create a new detailcommande</a>
+        </li>
+    </ul>
+{% endblock %}
