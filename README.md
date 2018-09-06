@@ -8,7 +8,7 @@ on clone le projet
 git clone https://github.com/bocasayroger/roger_test_bocassay.git
 
 on entre dans le repertoire de l'application
-cd challenge-sf
+cd roger_test_bocassay
 
 on installe les vendors
 composer install
